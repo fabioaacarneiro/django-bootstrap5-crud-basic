@@ -1,0 +1,23 @@
+{% extends 'users/base.html' %}
+{% block 'title' %}Atualizando{% endblock %}
+{% block 'heading' %}Atualizar Usuário{% endblock %}
+{% block content %}
+<div class="container text-center my-5">
+  <form action="{% url 'user_update' user.id %}" method="post">
+    {% csrf_token %}
+    <div class="row my-2 py-2 bg-warning bg-gradient text-black rounded-3 border-info">
+      <div class="col-sm">ID:</div>
+      <div class="col-sm">Nome:</div>
+      <div class="col-sm">Idade:</div>
+      <div class="col-sm">Atualizar?</div>
+    </div>
+
+    <div class="row my-2 py-2 bg-info bg-gradient text-white rounded-3 border-primary">
+      <div class="col-sm p-1 my-2">{{user.id}}</div>
+      <div class="col-sm p-1 mx-1"><input class="form-control" type="text" name="name" value="{{user.name}}"></div>
+      <div class="col-sm p-1 mx-1"><input class="form-control" type="text" name="age" value="{{user.age}}"></div>  
+      <div class="col-sm"><input class="btn btn-danger p-1 my-2" type="submit" name="delete" value="Atualizar"></div>
+    </div>
+  </form>
+</div>
+{% endblock %}

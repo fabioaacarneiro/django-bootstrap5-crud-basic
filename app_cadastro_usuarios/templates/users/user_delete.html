@@ -1,0 +1,23 @@
+{% extends 'users/base.html' %}
+{% block 'title' %}Deletando{% endblock %}
+{% block 'heading' %}Deletar um Usuário{% endblock %}
+{% block content %}
+<div class="container text-center my-5">
+  <form action="{% url 'user_delete' user.id %}" method="post">
+    {% csrf_token %}
+    <div class="row my-2 py-2 bg-danger bg-gradient text-white rounded-3 border-info">
+      <div class="col-sm">ID:</div>
+      <div class="col-sm">Nome:</div>
+      <div class="col-sm">Idade:</div>
+      <div class="col-sm">Deletar?</div>
+    </div>
+
+    <div class="row my-2 py-2 bg-info bg-gradient text-white rounded-3 border-primary">
+      <div class="col-sm p-1">{{user.id}}</div>
+      <div class="col-sm p-1">{{user.name}}</div>
+      <div class="col-sm p-1">{{user.age}}</div>
+      <div class="col-sm"><input class="btn btn-danger p-1" type="submit" name="delete" value="Deletar"></div>
+    </div>
+  </form>
+</div>
+{% endblock %}
