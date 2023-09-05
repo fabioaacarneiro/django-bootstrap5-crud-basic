@@ -9,4 +9,6 @@
 
 * pode ser que precise fazer as migrations
 
+![Imagem de exemplo da aplicação](img-git/img1.png "Imagem de exemplo da aplicação")
+
 ## Fabio Carneiro
