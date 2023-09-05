@@ -3,7 +3,7 @@
 {% block 'heading' %}Deletar um Usuário{% endblock %}
 {% block content %}
 <div class="container text-center my-5">
-  <form action="{% url 'user_delete' user.id %}" method="post">
+  <form action="{% url 'contact:user_delete' user.id %}" method="post">
     {% csrf_token %}
     <div class="row my-2 py-2 bg-danger bg-gradient text-white rounded-3 border-info">
       <div class="col-sm">ID:</div>

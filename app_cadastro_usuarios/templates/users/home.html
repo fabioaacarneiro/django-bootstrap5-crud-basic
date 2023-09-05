@@ -3,7 +3,7 @@
 {% block 'heading' %}Cadastrar Usuário{% endblock %}
 {% block content %}
 <div class="container text-center my-5">
-  <form action="{% url 'users_list' %}" method="post">
+  <form action="{% url 'contact:users_list' %}" method="post">
     {% csrf_token %}
     <div class="row my-2 py-2 bg-success bg-gradient text-white rounded-3 border-info">
       <div class="col-sm">Nome:</div>

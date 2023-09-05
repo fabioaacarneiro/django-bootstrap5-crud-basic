@@ -16,8 +16,8 @@
       <div class="col-sm p-1">{{user.id}}</div>
       <div class="col-sm p-1">{{user.name}}</div>
       <div class="col-sm p-1">{{user.age}}</div>
-      <div class="col-sm"><a class="btn btn-success p-1" href="{% url 'user_update' user.id %}">Atualizar</a></div>
-      <div class="col-sm"><a class="btn btn-danger p-1" href="{% url 'user_delete' user.id %}">Deletar</a></div>
+      <div class="col-sm"><a class="btn btn-success p-1" href="{% url 'contact:user_update' user.id %}">Atualizar</a></div>
+      <div class="col-sm"><a class="btn btn-danger p-1" href="{% url 'contact:user_delete' user.id %}">Deletar</a></div>
     </div>
   {% endfor %}
 </div>
